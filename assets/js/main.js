@@ -1,6 +1,6 @@
 const APIKEY = "4ee3f9f62d1144ca9677754d4b9bb0f2"
 const topicInput = document.querySelector("#topicInput")
-
+const selectMain = document.querySelector("main")
 
 let searchTerm = "tesla"
 
