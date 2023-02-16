@@ -1,14 +1,18 @@
 const APIKEY = "4ee3f9f62d1144ca9677754d4b9bb0f2"
 const topicInput = document.querySelector("#topicInput")
-const selectMain = document.querySelector("main")
+const allDivs = document.querySelectorAll("div")
 
-let searchTerm = "tesla"
+let searchTerm 
+
+const searchButton = document.querySelector("#searchButton").addEventListener('click', () =>{
+    searchTerm = topicInput.value
+    dataFetch()
+})
 
 
+const dataFetch = () => {
 
-
-
-fetch(`https://newsapi.org/v2/everything?q=${searchTerm}&from=2023-01-16&sortBy=publishedAt&apiKey=${APIKEY}`)
+    fetch(`https://newsapi.org/v2/everything?q=${searchTerm}&from=2023-01-16&sortBy=publishedAt&apiKey=${APIKEY}`)
     .then(response => response.json())
     .then(data => {
         
@@ -51,7 +55,8 @@ fetch(`https://newsapi.org/v2/everything?q=${searchTerm}&from=2023-01-16&sortBy=
             articleLinkToPage.href = `${articleLink}`
             articleDiv.appendChild(articleLinkToPage)
 
-
+            
             document.body.appendChild(articleDiv)
         })
     })
+}
