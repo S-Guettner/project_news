@@ -2,12 +2,13 @@ const APIKEY = "4ee3f9f62d1144ca9677754d4b9bb0f2"
 const topicInput = document.querySelector("#topicInput")
 const allDivs = document.querySelectorAll("div")
 
-let searchTerm 
+let searchTerm = "tesla"
 
 const searchButton = document.querySelector("#searchButton").addEventListener('click', () =>{
     searchTerm = topicInput.value
     dataFetch()
 })
+
 
 
 const dataFetch = () => {
@@ -60,3 +61,6 @@ const dataFetch = () => {
         })
     })
 }
+
+dataFetch()
+/* document.querryselector().appendchild */
