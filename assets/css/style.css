@@ -85,3 +85,16 @@ form{
     padding: .2rem;
     font-family: "openSans"
 }
+#searchButton{
+    border-radius: 5px;
+    padding: .2rem;
+    border: none;
+}
+#searchButton:hover{
+    background-color: #cececf;
+    color: white;
+}
+#topicInput{
+    border-radius: 5px;
+    padding: .2rem;
+}
