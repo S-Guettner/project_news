@@ -9,7 +9,9 @@
 </head>
 <body>
     <header>
-        <h1>World News</h1>
+            <!-- logo -->
+            <h1>World News</h1>
+        <!-- search and language form -->
         <form onsubmit="return false">
             <input placeholder="News topic..." type="text" name="topicInput" id="topicInput">
             <input type="button" value="Search" id="searchButton">
@@ -23,6 +25,7 @@
                 <option value="pl">pl</option>
             </select>
         </form>
+        <!-- categorie selection -->
         <section class="categoriesContainer">
             <button class="categorieButton" onclick="categorieDataFetch('technology')">technology</button>
             <button class="categorieButton" onclick="categorieDataFetch('sports')">sports</button>
@@ -33,9 +36,10 @@
             <button class="categorieButton" onclick="categorieDataFetch('business')">business</button>
         </section>
     </header>
-        <main>
+    <!-- parent container for articles -->
+    <main></main>
 
-        </main>
+
     <script src="./assets/js/main.js"></script>
 </body>
 </html>
