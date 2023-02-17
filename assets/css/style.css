@@ -94,6 +94,9 @@ form{
     padding: .2rem;
     font-family: "openSans"
 }
+.categorieButton:active{
+    background-color:#cececf;
+}
 #searchButton{
     border-radius: 5px;
     padding: .2rem;
