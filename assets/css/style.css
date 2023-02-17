@@ -106,7 +106,8 @@ form{
 #topicInput{
     border-radius: 5px;
     padding: .2rem;
+    border: none;
 }
 #languageInput{
-    margin-left: 2rem;
+    margin-left: .5rem;
 }
