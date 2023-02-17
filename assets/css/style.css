@@ -36,6 +36,7 @@ h3{
 }
 #description{
     padding: .5rem;
+    max-width: 100%;
 }
 #date{
     margin-bottom: 2rem;
@@ -57,10 +58,17 @@ header{
 
 form{
     text-align: center;
-    /* margin-top: 1rem; */
+    margin-bottom: 1rem;
 }
 .categoriesContainer{
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(7,1fr);
+
+}
+.categorieButton{
+    background-color: rgb(235, 225, 225);
+    border: none;
+    margin: .1rem;
+    padding: .2rem;
 }

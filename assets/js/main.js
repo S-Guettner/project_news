@@ -27,9 +27,16 @@ const searchButton = document.querySelector("#searchButton").addEventListener('c
 })
 
 const categorieDataFetch = (topic) =>{
-    removeElements()
     let categorie = topic
-    fetch(`https://newsapi.org/v2/top-headlines?country=de&category=${categorie}&apiKey=${APIKEY}`)
+    searchTerm = topic
+    removeElements()
+    languageInput.addEventListener('change' , (e) => {
+        language = e.target.value
+        removeElements()
+        categorieDataFetch(topic)
+    })
+    
+    fetch(`https://newsapi.org/v2/top-headlines?country=${language}&category=${categorie}&apiKey=${APIKEY}`)
     .then(response => response.json())
     .then(data => {
         
@@ -73,7 +80,6 @@ const categorieDataFetch = (topic) =>{
             articleDiv.appendChild(articleLinkToPage)
 
             document.querySelector("main").appendChild(articleDiv)
-            /* document.body.appendChild(articleDiv) */
         })
     })
 }
@@ -125,7 +131,6 @@ const dataFetch = () => {
             articleDiv.appendChild(articleLinkToPage)
 
             document.querySelector("main").appendChild(articleDiv)
-            /* document.body.appendChild(articleDiv) */
         })
     })
 }
