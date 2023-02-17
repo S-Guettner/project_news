@@ -1,4 +1,4 @@
-const APIKEY = "1432a29635d04cdf9fb92407142cabc4"
+const APIKEY = "c296de1e76b94e48bba47d88a5535faa"
 const topicInput = document.querySelector("#topicInput")
 const mainContainer = document.querySelector("main")
 const allDivs = mainContainer.getElementsByTagName("div")
