@@ -8,24 +8,26 @@ const languageInput = document.querySelector("#languageInput")
 let searchTerm = "bmw" 
 let language = "de"
 
+//language selection
 languageInput.addEventListener('change' , (e) => {
     language = e.target.value
     removeElements()
     dataFetch()
 })
-
+//removes elements to show only new articles
 const removeElements = () => {
     while(allDivs.length > 0) {
         allDivs[0].remove()
     }
 }
-
+//takes search input and fetches data from API
 const searchButton = document.querySelector("#searchButton").addEventListener('click', () =>{
     searchTerm = topicInput.value
     removeElements()
     dataFetch()
 })
-
+//takes categorie input and fetches data from API
+//takes selected language on change
 const categorieDataFetch = (topic) =>{
     let categorie = topic
     searchTerm = topic
@@ -35,7 +37,7 @@ const categorieDataFetch = (topic) =>{
         removeElements()
         categorieDataFetch(topic)
     })
-    
+    //categorie data fetch
     fetch(`https://newsapi.org/v2/top-headlines?country=${language}&category=${categorie}&apiKey=${APIKEY}`)
     .then(response => response.json())
     .then(data => {
@@ -86,7 +88,7 @@ const categorieDataFetch = (topic) =>{
 
 
 const dataFetch = () => {
-
+    //topic data fetch
     fetch(`https://newsapi.org/v2/everything?language=${language}&q=${searchTerm}&from=2023-01-17&sortBy=publishedAt&apiKey=${APIKEY}`)
     .then(response => response.json())
     .then(data => {
@@ -134,7 +136,7 @@ const dataFetch = () => {
         })
     })
 }
-
+//fetches data with topic from searchTerm variable
 dataFetch()
 
 
