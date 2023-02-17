@@ -4,7 +4,7 @@ const mainContainer = document.querySelector("main")
 const allDivs = mainContainer.getElementsByTagName("div")
 const languageInput = document.querySelector("#languageInput")
 
-
+//input variables
 let searchTerm = "bmw" 
 let language = "de"
 
