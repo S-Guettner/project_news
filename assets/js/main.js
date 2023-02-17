@@ -38,7 +38,7 @@ const categorieDataFetch = (topic) =>{
         categorieDataFetch(topic)
     })
     //categorie data fetch
-    fetch(`http://newsapi.org/v2/top-headlines?country=${language}&category=${categorie}&apiKey=${APIKEY}`)
+    fetch(`https://newsapi.org/v2/top-headlines?country=${language}&category=${categorie}&apiKey=${APIKEY}`)
     .then(response => response.json())
     .then(data => {
         
@@ -90,7 +90,7 @@ const categorieDataFetch = (topic) =>{
 
 const dataFetch = () => {
     //topic data fetch
-    fetch(`http://newsapi.org/v2/everything?language=${language}&q=${searchTerm}&from=2023-01-17&sortBy=publishedAt&apiKey=${APIKEY}`)
+    fetch(`https://newsapi.org/v2/everything?language=${language}&q=${searchTerm}&from=2023-01-17&sortBy=publishedAt&apiKey=${APIKEY}`)
     .then(response => response.json())
     .then(data => {
         
