@@ -82,6 +82,7 @@ const categorieDataFetch = (topic) =>{
             articleLinkToPage.href = `${articleLink}`
             articleDiv.appendChild(articleLinkToPage)
 
+            //append to main section
             document.querySelector("main").appendChild(articleDiv)
         })
     })
@@ -134,6 +135,7 @@ const dataFetch = () => {
             articleLinkToPage.href = `${articleLink}`
             articleDiv.appendChild(articleLinkToPage)
 
+            //append to main section
             document.querySelector("main").appendChild(articleDiv)
         })
     })
