@@ -98,3 +98,6 @@ form{
     border-radius: 5px;
     padding: .2rem;
 }
+#languageInput{
+    margin-left: 2rem;
+}
