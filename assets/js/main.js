@@ -50,6 +50,7 @@ const categorieDataFetch = (topic) =>{
             let wholeDate = items.publishedAt
             const date = wholeDate.slice(0,10)
             const articleLink = items.url
+            
             //parentContainer
             const articleDiv = document.createElement("div")
             
@@ -101,6 +102,7 @@ const dataFetch = () => {
             let wholeDate = items.publishedAt
             const date = wholeDate.slice(0,10)
             const articleLink = items.url
+            
             //parentContainer
             const articleDiv = document.createElement("div")
             
