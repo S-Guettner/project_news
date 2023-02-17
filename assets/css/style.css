@@ -4,7 +4,7 @@ body{
 }
 
 div{
-    width: 30vw;
+    max-width: 27rem;
     height: 85vh;
     text-align: center;
     margin: .5rem;
@@ -15,7 +15,9 @@ div{
 
 img{
     width: 100%;
-    max-height: 150px;
+    height: 250px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 a{
     text-decoration: none;

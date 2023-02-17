@@ -1,8 +1,8 @@
-const APIKEY = "4ee3f9f62d1144ca9677754d4b9bb0f2"
+const APIKEY = "1432a29635d04cdf9fb92407142cabc4"
 const topicInput = document.querySelector("#topicInput")
 const allDivs = document.querySelectorAll("div")
 
-let searchTerm = "tesla"
+let searchTerm = "bmw" 
 
 const searchButton = document.querySelector("#searchButton").addEventListener('click', () =>{
     searchTerm = topicInput.value
@@ -13,7 +13,7 @@ const searchButton = document.querySelector("#searchButton").addEventListener('c
 
 const dataFetch = () => {
 
-    fetch(`https://newsapi.org/v2/everything?q=${searchTerm}&from=2023-01-16&sortBy=publishedAt&apiKey=${APIKEY}`)
+    fetch(`https://newsapi.org/v2/everything?language=de&q=${searchTerm}&from=2023-01-17&sortBy=publishedAt&apiKey=${APIKEY}`)
     .then(response => response.json())
     .then(data => {
         
