@@ -1,16 +1,17 @@
-body{
+main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 div{
     max-width: 27rem;
-    height: 85vh;
+    height: 37rem;
     text-align: center;
     margin: .5rem;
     border: 1px solid gray;
     margin-top: 5rem;
     border-radius: 10px;
+    border-radius: 50px;
 }
 
 img{
@@ -27,9 +28,5 @@ a{
 }
 
 form{
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
     text-align: center;
 }

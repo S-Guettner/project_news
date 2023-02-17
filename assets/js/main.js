@@ -1,11 +1,28 @@
 const APIKEY = "1432a29635d04cdf9fb92407142cabc4"
 const topicInput = document.querySelector("#topicInput")
-const allDivs = document.querySelectorAll("div")
+const mainContainer = document.querySelector("main")
+const allDivs = mainContainer.getElementsByTagName("div")
+const languageInput = document.querySelector("#languageInput")
+
 
 let searchTerm = "bmw" 
+let language = "de"
+
+languageInput.addEventListener('change' , (e) => {
+    language = e.target.value
+    removeElements()
+    dataFetch()
+})
+
+const removeElements = () => {
+    while(allDivs.length > 0) {
+        allDivs[0].remove()
+    }
+}
 
 const searchButton = document.querySelector("#searchButton").addEventListener('click', () =>{
     searchTerm = topicInput.value
+    removeElements()
     dataFetch()
 })
 
@@ -13,7 +30,7 @@ const searchButton = document.querySelector("#searchButton").addEventListener('c
 
 const dataFetch = () => {
 
-    fetch(`https://newsapi.org/v2/everything?language=de&q=${searchTerm}&from=2023-01-17&sortBy=publishedAt&apiKey=${APIKEY}`)
+    fetch(`https://newsapi.org/v2/everything?language=${language}&q=${searchTerm}&from=2023-01-17&sortBy=publishedAt&apiKey=${APIKEY}`)
     .then(response => response.json())
     .then(data => {
         
@@ -56,11 +73,14 @@ const dataFetch = () => {
             articleLinkToPage.href = `${articleLink}`
             articleDiv.appendChild(articleLinkToPage)
 
-            
-            document.body.appendChild(articleDiv)
+            document.querySelector("main").appendChild(articleDiv)
+            /* document.body.appendChild(articleDiv) */
         })
     })
 }
 
 dataFetch()
-/* document.querryselector().appendchild */
+
+
+
+
